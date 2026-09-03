@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   SafeAreaView, View, Text, StyleSheet, ScrollView, Image,
-  TouchableOpacity, TextInput, Linking, Alert, ActivityIndicator
+  TouchableOpacity, TextInput, Linking, Alert, ActivityIndicator, Platform
 } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { supabase } from "./src/supabase";
@@ -723,7 +723,7 @@ const s=StyleSheet.create({
   optionText:{color:"#38506B"},optionTextActive:{color:"white",fontWeight:"800"},input:{backgroundColor:"white",borderWidth:1,borderColor:"#D9E1E8",borderRadius:12,padding:13,marginTop:10},
   infoBox:{backgroundColor:"white",padding:16,borderRadius:14},booking:{backgroundColor:"white",padding:16,borderRadius:14,marginBottom:12},bookingCode:{fontSize:18,fontWeight:"900",color:"#0B2E59"},
   bookingLine:{color:"#38506B",marginTop:4},planCard:{backgroundColor:"white",padding:18,borderRadius:16,marginBottom:12},planName:{fontSize:22,fontWeight:"900",color:"#0B2E59"},planDesc:{color:"#53677C",marginTop:4},
-  nav:{position:"absolute",left:0,right:0,bottom:0,backgroundColor:"white",borderTopWidth:1,borderTopColor:"#E5E9ED",flexDirection:"row",paddingVertical:12},
+  nav:{position:"absolute",left:0,right:0,bottom:0,backgroundColor:"white",borderTopWidth:1,borderTopColor:"#E5E9ED",flexDirection:"row",paddingTop:12,paddingBottom:Platform.OS==="android"?32:12},
   navItem:{flex:1,alignItems:"center"},navOn:{fontSize:10,fontWeight:"900",color:"#0B2E59"},navOff:{fontSize:10,color:"#8492A0"},
   subsection:{fontSize:18,fontWeight:"900",color:"#0B2E59",marginTop:18,marginBottom:10},
   staffChip:{paddingVertical:9,paddingHorizontal:12,borderRadius:18,borderWidth:1,borderColor:"#C8D3DE",marginRight:8,backgroundColor:"white"},
